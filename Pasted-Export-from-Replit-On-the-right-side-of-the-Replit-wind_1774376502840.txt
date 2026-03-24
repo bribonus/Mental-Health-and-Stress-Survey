@@ -1,0 +1,64 @@
+Export from Replit
+On the right side of the Replit window, click to enable the file tree. 
+
+From the three vertical dot menu, choose Download as zip
+
+ 
+
+Prepare a GitHub repository for your survey app
+Create a GitHub repository
+Make it public and create a README file.
+
+ 
+
+Create an Azure Static Web App to deploy your survey app
+Point to your survey repository for Deployment.
+
+From the Static Web App left menu, choose Settings then Environment variables
+
+Click to +Add an Environment variables
+
+Name: VITE_SUPABASE_ANON_KEY     Value:  paste in your anon key from Supabase      Click Apply.
+
+Name: VITE_SUPABASE_URL     Value:  paste in your anon key from Supabase      Click Apply.
+
+Click to Apply the new environment variables.
+
+ 
+
+Populate your GitHub repository with files from Replit
+Put the files in your local Git repository
+Use GitHub Desktop to Clone to the repository to your computer.
+
+Open the .zip file you downloaded from Replit.
+
+Copy and paste the files into your repository. Don't forget the .gitignore file. It is hidden.
+
+Download azure-static-web-apps.yml Download azure-static-web-apps.ymland paste it into .github/workflow. Delete the existing .yml file in the folder.
+
+Add environment variables on GitHub
+From GitHub, go into your repository for this product. On the top menu, click Settings
+
+From the left menu, scroll down to Secrets and variables --> Actions --> New repository secret
+
+Name: VITE_SUPABASE_URL    Secret: paste in your Supabase URL  --> Add secret
+
+Name: VITE_SUPABASE_ANON_KEY    Secret: paste in your Supabase Anon Key --> Add secret
+
+Delete the existing Azure Static Web Token secret.
+
+From your Azure Static App, click on the Overview menu on the left. Then, across the top menu, click Manage deployment token. Copy this deployment token.
+
+Name: AZURE_STATIC_WEB_APPS_API_TOKEN    Secret: paste in your Azure deployment token --> Add secret
+
+ 
+
+From GitHub Desktop, commit and push your code from local Git to GitHub.
+
+From GitHub, across the top menu, click Actions and watch for a successful deployment.
+
+On successful deployment, click on your static web app URL (from the Overview page in Azure)
+
+Test your survey and results page.
+
+ 
